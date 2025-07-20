@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тетрис</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>ТЕТРИС</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">Счёт:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Уровень:</span>
+                    <span id="level">1</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Линии:</span>
+                    <span id="lines">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-main">
+            <div class="side-decoration left-decoration">
+                <img src="images/tetris-left.png" alt="Тетрис декор" class="decoration-image">
+            </div>
+            
+            <div class="game-center">
+                <div class="game-area">
+                    <canvas id="gameCanvas" width="300" height="600"></canvas>
+                    <div class="game-overlay" id="gameOverlay">
+                        <div class="overlay-content">
+                            <h2 id="overlayTitle">Игра приостановлена</h2>
+                            <p id="overlayMessage">Нажмите ПРОБЕЛ для продолжения</p>
+                            <button id="startButton" class="game-button">Начать игру</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-sidebar">
+                    <div class="next-piece">
+                        <h3>Следующая фигура</h3>
+                        <canvas id="nextCanvas" width="120" height="120"></canvas>
+                    </div>
+                    
+                    <div class="controls">
+                        <h3>Управление</h3>
+                        <div class="control-item">
+                            <span class="key">← →</span>
+                            <span class="action">Движение</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="key">↓</span>
+                            <span class="action">Быстрое падение</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="key">↑</span>
+                            <span class="action">Поворот</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="key">ПРОБЕЛ</span>
+                            <span class="action">Пауза</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="side-decoration right-decoration">
+                <img src="images/tetris-right.png" alt="Тетрис декор" class="decoration-image">
+            </div>
+        </div>
+    </div>
+    
+    <script src="tetris.js"></script>
+</body>
+</html> 
